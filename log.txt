@@ -1,0 +1,160 @@
+    1  ls
+    2  ls ./
+    3  mkdir chifundo_project
+    4  ls
+    5  samtools
+    6  sudo apt install samtools
+    7  ls
+    8  cd chifundo_project/
+    9  nano script.sh
+   10  cd chifundo_project/
+   11  bwa
+   12  sudo apt install bwa
+   13  sudo apt install bwa-mem
+   14  apt install bwa
+   15  cd chifundo_project/
+   16  nano wgsim2.sh 
+   17  cd chifundo_project/
+   18  cd wgsim-master/
+   19  gcc -g -O2 -Wall -o wgsim wgsim.c -lz -lm
+   20  sudo apt install gcc
+   21  gcc -g -O2 -Wall -o wgsim wgsim.c -lz -lm
+   22  gcc
+   23  ls
+   24  gcc -g -O2 -Wall -o wgsim wgsim.c -lz -lm
+   25  nano instal.sh
+   26  bash instal.sh
+   27  ls
+   28  gcc -g -O2 -Wall -o wgsim wgsim.c -lz -lm
+   29  wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2wget https://github.com/samtools/samtools/releases/download/1.9/samtools-1.9.tar.bz2
+   30  ls
+   31  tar -vxjf bcftools-1.9.tar.bz2
+   32  tar -vxjf samtools-1.9.tar.bz2
+   33  cd samtools-1.9
+   34  make
+   35  cd ../
+   36  wget https://github.com/samtools/bcftools/releases/download/1.9/bcftools-1.9.tar.bz2
+   37  tar -vxjf bcftools-1.9.tar.bz2
+   38  cd bcftools-1.9/
+   39  make
+   40  cd ../
+   41  export PATH="$PATH:/usr/bin/bcftools-1.9"
+   42  export PATH="$PATH:/usr/bin/samtools-1.9"
+   43  bcftoolse
+   44  source ~/.profil
+   45  source ~/.profile
+   46  bcftools
+   47  samtools
+   48  apt install samtools
+   49  apt install bcftools
+   50  samtools
+   51  cd ../
+   52  ls
+   53  nano wgsim2.sh 
+   54  cd chifundo_project/
+   55  nano wgsim2.sh 
+   56  history|wc -l
+   57  ls
+   58  cd chifundo
+   59  cd chifundo_project/
+   60  ls
+   61  nano wgsim2.sh
+   62  ls
+   63  apt install bwa
+   64  bwa
+   65  ls
+   66  nano wgsim2.sh
+   67  ls
+   68  cd chifundo_project/
+   69  ls
+   70  nano wgsim2.sh
+   71  cd
+   72  cd tutorial_7859/
+   73  ls
+   74  cd
+   75  cd chifundo_project/
+   76  nano wgsim2.sh
+   77  ls
+   78  cd tutorial_7859/
+   79  ls
+   80  bash wgsim2.sh 
+   81  apt install dwgsim
+   82  nano wgsim2.sh 
+   83  bash wgsim2.sh 
+   84  ls
+   85  nano wgsim2.sh 
+   86  java -jar CreateSequenceDictionary.jar REFERENCE=human_b37_20.fasta OUTPUT=human_b37_20.dict
+   87  apt install java
+   88  apt install openjdk-8-jre-headless
+   89  cd chifundo_project/
+   90  cd
+   91  apt update
+   92  apt install git unzip tabix docker.io python-all
+   93  docker build -t "vep:v1" .
+   94  ls
+   95  cd mutect_pineline/
+   96  cd
+   97  cd mutect_pineline/
+   98  ls
+   99  tmux
+  100  ls
+  101  cd mutect
+  102  cd chi
+  103  tmux a
+  104  git clone https://github.com/chifundohiwa/chifundo_thesis.git
+  105  docker images
+  106  docker ps -a
+  107  docker kill youthful_cray 
+  108  docker ps -a
+  109  ll
+  110  df -h
+  111  du -d 1 -h
+  112  docker images
+  113  docker rmi vep:v1
+  114  docker kill f0ea89828580
+  115  docker rm f0ea89828580
+  116  df -h
+  117  git clone https://github.com/chifundohiwa/chifundo_thesis.git
+  118  ls
+  119  cd chifundo_thesis/
+  120  ls
+  121  ls -a
+  122  git status
+  123* git 
+  124  echo "# chifundo_thesis" >> README.md
+  125  ls
+  126  git status
+  127  git add README.md
+  128  git status
+  129  cd
+  130  ls
+  131  cd chifundo_project/
+  132  ls
+  133  cd tutorial_7859/
+  134  ls
+  135  ls -l
+  136  ls -lh
+  137  cp chr19_chr19_KI270866v1_alt.fasta ../../chifundo_thesis/
+  138  cat wgsim2.sh 
+  139  cp  wgsim2.sh ../../chifundo_thesis/
+  140  cd
+  141  ls
+  142  cp mutect_pineline/ chifundo_thesis/
+  143  ll chifundo_thesis/
+  144  cp mutect_pineline/*  chifundo_thesis/
+  145  cp mutect_pineline/*.*  chifundo_thesis/
+  146  ls chifundo_thesis/
+  147  cp -r mutect_pineline/*  chifundo_thesis/
+  148  ls chifundo_thesis/
+  149  ls chifundo_thesis/dockerfiles/
+  150  cd chifundo_thesis/
+  151  git status
+  152  git add *
+  153  git status
+  154  git commit -m "first commit"
+  155  git config --global user.email "chifundohiwa@gmail.com"
+  156  git config --global user.name "chifundohiwa"
+  157  git commit -m "first commit"
+  158  git status
+  159  git push origin master
+  160  history > log.txt
