@@ -22,7 +22,10 @@ forder to store relevants files
   $docker run --rm -v $PWD:/fastq biocontainers/bwa:v0.7.15_cv3 bwa index /fastq/chr19_chr19_KI270866v1_alt.fasta
 9.Do alignment
   $bash 01_Alignment.sh ( sample name here without the blankets i.e.7859_GPI)
+10.check results file to contain a BAM and a LOG folder. 
+   The BAM folder should contain "solted bam file"  
 10.Add all current changes to the next commit in githud (always use git status to know what to do next)
   $git add 
   $git commit -m " message for tracking changes"
   $git push origin master 
+11.The reference forder at this point should contain 6 files, the original fasta file, .bwt;.pac; .sa; .ann; .amb 
