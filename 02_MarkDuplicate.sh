@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir_Output=PATH_TO/results
+dir_Output=/root/chifundo_thesis/results
 
 docker run --rm -it -v ${dir_Output}:/Output \
 	broadinstitute/picard:latest \

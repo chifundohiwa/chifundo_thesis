@@ -21,6 +21,8 @@ forder to store relevants files
   $chmod -R 777 /root/chifundo_thesis/
   $docker run --rm -v $PWD:/fastq biocontainers/bwa:v0.7.15_cv3 bwa index /fastq/chr19_chr19_KI270866v1_alt.fasta
 9.Do alignment
+  customise the alignment file to fit the samples and correct docker picture version used. in this case i used biocontainers/ bwa:v0.7.15_cv3
+  #$1 is used as a substite for sample name
   $bash 01_Alignment.sh ( sample name here without the blankets i.e.7859_GPI)
 10.check results file to contain a BAM and a LOG folder. 
    The BAM folder should contain "solted bam file"  
@@ -29,3 +31,5 @@ forder to store relevants files
   $git commit -m " message for tracking changes"
   $git push origin master 
 11.The reference forder at this point should contain 6 files, the original fasta file, .bwt;.pac; .sa; .ann; .amb 
+12.Run the MarkedDuplicates step to produce name__dedup_output.metrics name__dedupped.bai  name__dedupped.bam 
+  $bash 02_MarkedDuplicates.sh ( sample name here without the blankets i.e.7859_GPI)
