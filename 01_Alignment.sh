@@ -11,7 +11,7 @@ docker run --rm -v ${dir_fastq}:/fastq -v ${dir_Hg38}:/reference biocontainers/b
 	bwa mem \
 	-t 7 \
 	-R "@RG\tID:$1\tSM:$1\tPL:Illumina\tLB:WES" \
-	/reference/chr19_chr19_KI270866v1_alt.fasta \
-	/fastq/$1.read1.fq \
-	/fastq/$1.read2.fq \
+	/reference/Homo_sapiens_assembly38.fasta \
+	/fastq/$1.read1.fq.gz \
+	/fastq/$1.read2.fq.gz \
 	| samtools sort -o ${dir_Output}/$1/BAM/$1_sorted.bam

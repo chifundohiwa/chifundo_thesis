@@ -1,14 +1,14 @@
 #!/bin/bash
 
-dir_Output=PATH_TO/results
-dir_Hg38=PATH_TO/hg38bundle
+dir_Output=/root/chifundo_thesis/results
+dir_Hg38=/root/chifundo_thesis/hg38bundle
 
 
 docker run --rm -it -v ${dir_Output}:/Output \
 	-v ${dir_Hg38}:/Hg38_dir \
 	broadinstitute/gatk:4.0.2.1 gatk --java-options "-Xmx8G" \
 	BaseRecalibrator \
-	-R /Hg38_dir/Homo_sapiens_assembly38.fasta \
+	-R /Hg38_dir/chr19_chr19_K1270866v1_alt.fasta \
 	--known-sites /Hg38_dir/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz \
 	--known-sites /Hg38_dir/dbsnp_146.hg38.vcf.gz \
 	-I /Output/$1/BAM/$1_dedupped.bam \
