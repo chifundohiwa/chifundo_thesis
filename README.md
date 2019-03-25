@@ -29,7 +29,7 @@ use tmux when working in the droplet
    This process will take about 18hrs + dependent on how big the file is.
 11.check results file to contain a BAM and a LOG folder. 
    The BAM folder should contain "solted bam file"  
-12.4Add all current changes to the next commit in githud (always use git status to know what to do next)
+12.Add all current changes to the next commit in githud (always use git status to know what to do next)
    $git add 
    $git commit -m " message for tracking changes"
    $git push origin master 
@@ -41,7 +41,14 @@ use tmux when working in the droplet
    $docker run --rm -v $PWD:/data broadinstitute/gatk:4.0.2.1 gatk CreateSequenceDictionary -R /data/hg38bundle/Homo_sapiens_assembly38.fasta
    $samtools faidx hg38bundle/Homo_sapiens_assembly38.fasta
    $bash 03_recalibration.sh (sample name here without the blankets i.e.2019_SP1)
-   This process will take atleast 4hour to run 
-
-16.
-
+   This process will take atleast 4hour to run
+   The result from recalibration will be a recal.bam and recal.bai files
+16.Do variation on dockerGATK using mutech2
+   use docker pull command to install GATK docker image
+   $docker pull broadinstitute/gatk
+   both normal and tumor samples will be used as input in mutech2 variant calling. Just be sure to use the correct files and not to missmatch to avoid aligning a the wrong sample. 
+   $bash 04_variation.sh (samples name: tumour sample ($1) normal sample($2)ie 2019_SP1 2019_SN1 )
+   This step will take some time ----more than 48hours
+17.Variant annotation using Variant Effect Predictor (VEP)
+   $https://asia.ensembl.org/Homo_sapiens/Tools/VEP?db=core
+   annotate based on 
