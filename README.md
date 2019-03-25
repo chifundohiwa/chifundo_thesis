@@ -51,4 +51,4 @@ use tmux when working in the droplet
    This step will take some time ----more than 48hours
 17.Variant annotation using Variant Effect Predictor (VEP)
    $https://asia.ensembl.org/Homo_sapiens/Tools/VEP?db=core
-   annotate based on 
+   annotate based on REFSEQ transcript; protein function prediction using SIFT AND POLYTHEN; allele frequency in 1000genome and Genomead 
