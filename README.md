@@ -49,6 +49,19 @@ use tmux when working in the droplet
    both normal and tumor samples will be used as input in mutech2 variant calling. Just be sure to use the correct files and not to missmatch to avoid aligning a the wrong sample. 
    $bash 04_variation.sh (samples name: tumour sample ($1) normal sample($2)ie 2019_SP1 2019_SN1 )
    This step will take some time ----more than 48hours
-17.Variant annotation using Variant Effect Predictor (VEP)
+17.combine chromosome 1 to 22 into one file. remove info colum to make the file smaller to be accepted by VEP (>50KB)
+   $bash combined_vcf.sh
+18.Variant annotation using Variant Effect Predictor (VEP)
    $https://asia.ensembl.org/Homo_sapiens/Tools/VEP?db=core
-   annotate based on REFSEQ transcript; protein function prediction using SIFT AND POLYTHEN; allele frequency in 1000genome and Genomead 
+   annotate based on REFSEQ transcript; protein function prediction using SIFT AND POLYTHEN; allele frequency in 1000genome global and 1000 genome continental 
+19.Apply filters to the result file: consequence is not synonymous_variant; impact is not Low; impact is not Modifier.
+20.Download filtered VCF 
+21.To select only the genes associated with Primary resistance to EGFR TKIs :
+   key.txt (containing a list of coma separeted Genes of interest) 
+   VCF file from VEP
+   $bash associated_gene_selection.sh ( $1 main vcf file $2 key.txt)
+   or 
+   txt file from VEP (this script will include the header)
+   $bash associated_gene_selection.sh ( $1 main txt file)
+21
+   

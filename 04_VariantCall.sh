@@ -10,7 +10,7 @@ docker run --rm -v ${dir_Output}:/Output \
         -I /Output/$1/BAM/$1_recal.bam \
         -tumor $1 \
         -I /Output/$2/BAM/$2_recal.bam \
-        -tumor $2 \
+        -normal $2 \
         -pon /Hg38_dir/1000g_pon.hg38.vcf.gz \
         --germline-resource /Hg38_dir/af-only-gnomad.hg38.vcf.gz \
         --af-of-alleles-not-in-resource 0.0000025 \
